@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1536845577 source:/home/formation/workspace/Vecteur/main.cpp
+	<iostream>
+	"Vecteur.h"
+
+1536845629 /home/formation/workspace/Vecteur/include/Vecteur.h
+
+1536845646 source:/home/formation/workspace/Vecteur/src/Vecteur.cpp
+	"Vecteur.h"
+	<iostream>
+

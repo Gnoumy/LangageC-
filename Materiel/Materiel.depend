@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1536839829 source:/home/formation/workspace/Materiel/main.cpp
+	<iostream>
+	"Materiel.h"
+
+1536839764 source:/home/formation/workspace/Materiel/src/Materiel.cpp
+	"Materiel.h"
+	<iostream>
+	<string.h>
+
+1536839734 /home/formation/workspace/Materiel/include/Materiel.h
+	<string>
+
