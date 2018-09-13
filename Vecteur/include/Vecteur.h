@@ -21,7 +21,7 @@ class Vecteur
         float getZ();
 
         void addition(Vecteur);
-        float scalaire();
+        float scalaire(Vecteur &);
         void afficher();
 
 

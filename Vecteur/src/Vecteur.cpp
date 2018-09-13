@@ -49,6 +49,13 @@ void Vecteur::addition(Vecteur v2)
     setY( getY() + v2.getY());
     setZ( getZ() + v2.getZ());
 
-    cout << "<"<< getX() <<","<< getY() <<","<< getZ() <<">"<<endl;
+    cout << "<"<< this->x <<","<< this->y <<","<< this->z <<">"<<endl;
+}
+
+float Vecteur::scalaire(Vecteur & v)
+{
+    float resultat;
+    resultat = x*v.x + y*v.y + z*v.z;
+    return resultat;
 }
 
