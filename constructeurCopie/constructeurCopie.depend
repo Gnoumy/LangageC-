@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1536850426 source:/home/formation/workspace/constructeurCopie/main.cpp
+	<iostream>
+	"Tableau.h"
+
+1536850290 source:/home/formation/workspace/constructeurCopie/src/Tableau.cpp
+	"Tableau.h"
+	<iostream>
+
+1536850320 /home/formation/workspace/constructeurCopie/include/Tableau.h
+
