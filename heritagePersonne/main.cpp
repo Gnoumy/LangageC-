@@ -2,7 +2,7 @@
 #include <typeinfo> // permet de connaitre les informations des classes
 #include "Personne.h"
 #include "Salarie.h"
-
+#include "Etudiant.h"
 
 using namespace std;
 
@@ -14,7 +14,6 @@ int main()
     Salarie  s("Martin", "Steve", 44, 20010);
     /********* FIN Instanciation *********/
 
-
     cout<<"----- Personne -----" <<endl;
     cout<<p.info() << p.getInitials() <<endl;
 
@@ -23,7 +22,6 @@ int main()
     cout<<p2.info();
     cout<< endl << "----- Salarie -----" <<endl;
     cout<<s.info();
-
 
     /************************************************************/
     cout<< endl << "----- Tableau de Personnes -----" <<endl;
@@ -73,6 +71,25 @@ int main()
     }
     /************************************************************/
 
+    /************************************************************/
+    cout<< endl << "----- Tableau d'Etudiants avec affichage du resultat -----" <<endl;
+    Etudiant * tabEtud[3];
+    tabEtud[0] = new Etudiant("Bond", "James", 26, 5,4,3);
+    tabEtud[1] = new Etudiant("Kiki", "Romain", 26, 5,8,3);
+    tabEtud[2] = new Etudiant("Hannibal", "Lecter", 26, 20,20,3);
+
+    for(int i=0; i<3; i++)
+    {
+
+        Etudiant * objEtudiant = dynamic_cast<Etudiant*>(tabEtud[i]);
+        //cout << typeid(*tabEtud[i]).name() << endl; //affichera le nom de la classe en cours
+        if(objEtudiant != nullptr) // si objSal a une adresse mémoire, alors on rentre dans la condition
+        {
+             cout << tabEtud[i]->info();
+            //cout << endl << "Etudiant: " << objEtudiant->resultat();
+        }
+    }
+    /************************************************************/
 
     return 0;
 }

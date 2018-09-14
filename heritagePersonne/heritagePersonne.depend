@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1536929025 source:/home/formation/workspace/heritagePersonne/main.cpp
+1536935911 source:/home/formation/workspace/heritagePersonne/main.cpp
 	<iostream>
+	<typeinfo>
 	"Personne.h"
 	"Salarie.h"
+	"Etudiant.h"
 
 1536927212 source:/home/formation/workspace/heritagePersonne/src/Personne.cpp
 	"Personne.h"
@@ -19,4 +21,18 @@
 
 1536925475 /home/formation/workspace/heritagePersonne/include/Salarie.h
 	"Personne.h"
+
+1536936208 source:/home/formation/workspace/heritagePersonne/src/Etudiant.cpp
+	"Etudiant.h"
+	"Niveau.h"
+	<sstream>
+
+1536935424 /home/formation/workspace/heritagePersonne/include/Etudiant.h
+	"Niveau.h"
+	"Personne.h"
+
+1536933609 /home/formation/workspace/heritagePersonne/include/Niveau.h
+
+1536933526 source:/home/formation/workspace/heritagePersonne/src/Niveau.cpp
+	"Niveau.h"
 

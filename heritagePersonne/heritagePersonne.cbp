@@ -34,9 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Etudiant.h" />
+		<Unit filename="include/Niveau.h" />
 		<Unit filename="include/Personne.h" />
 		<Unit filename="include/Salarie.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Etudiant.cpp" />
+		<Unit filename="src/Niveau.cpp" />
 		<Unit filename="src/Personne.cpp" />
 		<Unit filename="src/Salarie.cpp" />
 		<Extensions>
