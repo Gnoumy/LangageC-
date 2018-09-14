@@ -1,6 +1,8 @@
 #include <iostream>
+#include <typeinfo> // permet de connaitre les informations des classes
 #include "Personne.h"
 #include "Salarie.h"
+
 
 using namespace std;
 
@@ -24,6 +26,7 @@ int main()
 
 
     /************************************************************/
+    cout<< endl << "----- Tableau de Personnes -----" <<endl;
     Personne mesPers[3];
 
     mesPers[0] = p;
@@ -32,22 +35,44 @@ int main()
 
     for(int i=0; i<3; i++)
     {
-        cout << mesPers[i].info() << endl;
+        cout << mesPers[i].info();
         // appellera la méthode infos de Personne et n'affichera pas le salaire
         // car la méthode info() n'est pas déclarée en tant que VIRTUAL
     }
     /************************************************************/
 
     /************************************************************/
+    cout<< endl << "----- Tableau de new Personnes et salariés -----" <<endl;
     Personne * personnel[3];
     personnel[0] = new Personne("Delouvrier", "Romain", 26);
     personnel[1] = new Salarie("Delouvrier", "Romain", 26, 23000);
     personnel[2] = new Personne("Delouvrier", "Romain", 26);
     for(int i=0; i<3; i++)
     {
-        cout << personnel[i]->info() << endl;
+        cout << personnel[i]->info();
         //personnel est un pointeur, donc on utilise la flèche ->
     }
     /************************************************************/
+
+    /************************************************************/
+    cout<< endl << "----- Tableau de Personnes avec affichage du salaire -----" <<endl;
+    Personne * tableau[3];
+    tableau[0] = new Personne("Delouvrier", "Romain", 26);
+    tableau[1] = new Salarie("Delouvrier", "Romain", 26, 23000);
+    tableau[2] = new Personne("Delouvrier", "Romain", 26);
+
+    for(int i=0; i<3; i++)
+    {
+        cout << tableau[i]->info();
+        Salarie * objSal = dynamic_cast<Salarie*>(tableau[i]);
+        cout << typeid(*tableau[i]).name() << endl; //affichera le nom de la classe en cours
+        if(objSal != nullptr) // si objSal a une adresse mémoire, alors on rentre dans la condition
+        {
+            cout << endl << "Salaire Annuel: " << objSal->getSalaireAnnuel();
+        }
+    }
+    /************************************************************/
+
+
     return 0;
 }
