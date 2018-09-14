@@ -7,7 +7,7 @@ class Niveau
     public:
         Niveau();
         virtual ~Niveau();
-        enum niveau {DEUG, Licence, Maitrise};
+        enum titre {DEUG, Licence, Maitrise};
 
     protected:
 

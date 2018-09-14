@@ -8,6 +8,7 @@ class Etudiant:public Personne
     private:
         float note[3];
         Niveau niveau;
+        static int obtention;
     public:
         Etudiant(string, string, int, float, float, float);
         virtual ~Etudiant();

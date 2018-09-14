@@ -3,6 +3,7 @@
 #include "Personne.h"
 #include "Salarie.h"
 #include "Etudiant.h"
+#include "Niveau.h"
 
 using namespace std;
 
@@ -80,7 +81,6 @@ int main()
 
     for(int i=0; i<3; i++)
     {
-
         Etudiant * objEtudiant = dynamic_cast<Etudiant*>(tabEtud[i]);
         //cout << typeid(*tabEtud[i]).name() << endl; //affichera le nom de la classe en cours
         if(objEtudiant != nullptr) // si objSal a une adresse mémoire, alors on rentre dans la condition
