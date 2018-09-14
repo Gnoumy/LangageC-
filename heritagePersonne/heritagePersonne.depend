@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1536925830 source:/home/formation/workspace/heritagePersonne/main.cpp
+	<iostream>
+	"Personne.h"
+	"Salarie.h"
+
+1536924921 source:/home/formation/workspace/heritagePersonne/src/Personne.cpp
+	"Personne.h"
+	<iostream>
+	<sstream>
+
+1536925831 /home/formation/workspace/heritagePersonne/include/Personne.h
+	<iostream>
+
+1536925754 source:/home/formation/workspace/heritagePersonne/src/Salarie.cpp
+	"Salarie.h"
+	"Personne.h"
+	<sstream>
+
+1536925475 /home/formation/workspace/heritagePersonne/include/Salarie.h
+	"Personne.h"
+
