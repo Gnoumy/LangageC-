@@ -3,11 +3,14 @@
 #include <iostream>
 
 using namespace std;
+
 class Personne
 {
     private:
         string nom;
         string prenom;
+        static int majorite;
+        bool estMajeur();
 
     protected:
         int age;
@@ -27,6 +30,7 @@ class Personne
         string info();
         string getInitials();
 
+        static void ChangeMajorite(int);
 };
 
 #endif // PERSONNE_H

@@ -5,6 +5,8 @@
 
 using namespace std;
 
+int Personne::majorite = 18; //variable commune à toutes les instances
+
 Personne::Personne( string pNom, string pPrenom, int pAge)
 {
     this->setNom(pNom);
@@ -38,7 +40,8 @@ void Personne::setAge(int pAge)
 string Personne::info()
 {
     ostringstream infoPersonne;
-    infoPersonne << "Nom: "<<getNom() << endl <<"Prenom: " << getPrenom() << endl << "Age: " << getAge()<<endl;
+    infoPersonne << endl << "Nom: "<<getNom() << endl <<"Prenom: " << getPrenom() << endl << "Age: " << getAge();
+    infoPersonne << endl << ((estMajeur()==true)? "Majeur(e)" : "Mineur(e)") << endl;
 
     return infoPersonne.str();
 }
@@ -49,5 +52,18 @@ string Personne::getInitials()
     initials << getNom().at(0) << getPrenom().at(0);
 
     return initials.str();
-
 }
+
+bool Personne::estMajeur()
+{
+    return age >= Personne::majorite;
+}
+
+void Personne::ChangeMajorite(int newMajorite)
+{
+    Personne::majorite = newMajorite;
+}
+
+
+
+
