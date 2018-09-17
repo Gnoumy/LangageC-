@@ -5,11 +5,13 @@ using namespace std;
 
 int Etudiant::obtention= 10; //variable commune à toutes les instances
 
-Etudiant::Etudiant(string nom, string prenom, int age, float n, float n2, float n3):Personne(nom, prenom, age)
+Etudiant::Etudiant(string nom, string prenom, int age, float tnotes[], Niveau lvl):Personne(nom, prenom, age)
 {
-    note[0] = n;
-    note[1] = n2;
-    note[2] = n3;
+    this->niveau = lvl;
+    for(int i=0; i<3; i++)
+    {
+        this->note[i]= tnotes[i];
+    }
 }
 
 Etudiant::~Etudiant()
@@ -19,8 +21,21 @@ Etudiant::~Etudiant()
 
 string Etudiant::info()
 {
+
     ostringstream infoEtudiant;
     infoEtudiant << Personne::info();
+    switch (niveau)
+    {
+        case Niveau::DEUG:
+            infoEtudiant << "Deug BAC +2" <<endl;
+            break;
+        case Niveau::Licence:
+            infoEtudiant << "Licence BAC+3" <<endl;
+            break;
+        case Niveau::Maitrise:
+            infoEtudiant << "Maitrise BAC +5" <<endl;
+            break;
+    }
     infoEtudiant << "Note 1: " <<this->note[0] << " - Note 2: " << this->note[1] << " - Note 3: " << this->note[2]<<endl;
     infoEtudiant << Etudiant::resultat() <<endl;
 

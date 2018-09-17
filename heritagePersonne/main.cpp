@@ -74,10 +74,11 @@ int main()
 
     /************************************************************/
     cout<< endl << "----- Tableau d'Etudiants avec affichage du resultat -----" <<endl;
+    float tab[3] = {12,5,17};
     Etudiant * tabEtud[3];
-    tabEtud[0] = new Etudiant("Bond", "James", 26, 5,4,3);
-    tabEtud[1] = new Etudiant("Kiki", "Romain", 26, 5,8,3);
-    tabEtud[2] = new Etudiant("Hannibal", "Lecter", 26, 20,20,3);
+    tabEtud[0] = new Etudiant("Bond", "James", 26, tab, Niveau::DEUG);
+    tabEtud[1] = new Etudiant("Kiki", "Romain", 26, tab, Niveau::Licence);
+    tabEtud[2] = new Etudiant("Hannibal", "Lecter", 26, tab, Niveau::Maitrise);
 
     for(int i=0; i<3; i++)
     {
